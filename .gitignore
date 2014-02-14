@@ -1,0 +1,12 @@
+*.class
+*.jar
+*.war
+*.ear
+*.prefs
+*.component
+.project
+.classpath
+.DS_Store
+projects/.DS_Store
+Servers
+.metadata
