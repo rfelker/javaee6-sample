@@ -5,8 +5,8 @@ This repository contains a simple Java EE 6 example application
 
 
 
-URL: http://localhost:8080/sjwa
-URL: http://localhost:8080/sjwa/rechner
+* URL: http://localhost:8080/sjwa
+* URL: http://localhost:8080/sjwa/rechner
 
 IDE-Support with Eclipse IDE for Java EE Developers
 * Download Eclipse https://www.eclipse.org/downloads
