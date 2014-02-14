@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Rechner</title>
+    </h:head>
+    <h:body>     
+    	<h1>Rechner</h1>
+        <h:form>
+            <table>
+                <tr>
+                    <td>Wert 1: </td>
+                    <td><h:inputText value="#{berechnungService.werte.wert1}" id="input1"/> <h:message for="input1" /></td>
+                </tr>
+                <tr>
+                    <td>Wert 2: </td>
+                    <td><h:inputText value="#{berechnungService.werte.wert2}" id="input2"/> <h:message for="input2" /></td>
+                </tr>
+            </table>
+            <p>
+                <h:commandButton action="#{berechnungService.addiere}" value="Addition" />
+                <h:commandButton action="#{berechnungService.alleAusfuehren}" value="Alle Berechnungen" />
+            </p>
+        </h:form>
+        <p>
+            <ui:repeat value="#{berechnungService.output}" var="line">
+                <h:outputText value="#{line}" /><br/>
+            </ui:repeat>
+        </p>        
+    </h:body>
+</html>
+
