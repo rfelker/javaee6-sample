@@ -21,7 +21,7 @@ import de.codecentric.sjwa.operationen.Addition;
 /**
  * CDI funktioniert auch in einem Servlet (3.0)
  */
-@WebServlet(name = "RechnerServlet", urlPatterns = { "/rechner" })
+@WebServlet(name = "RechnerServlet", urlPatterns = { "/rechner2" })
 public class RechnerServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -30,8 +30,7 @@ public class RechnerServlet extends HttpServlet {
 	private Addition addition;
 
 	@Override
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text /html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		try {
