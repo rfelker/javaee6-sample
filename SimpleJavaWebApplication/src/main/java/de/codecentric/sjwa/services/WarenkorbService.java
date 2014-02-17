@@ -1,5 +1,7 @@
 package de.codecentric.sjwa.services;
 
+import java.io.Serializable;
+
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
@@ -8,10 +10,20 @@ import de.codecentric.sjwa.model.WarenkorbTO;
 
 @Named
 @SessionScoped
-public interface WarenkorbService {
+public class WarenkorbService implements Serializable {
 
-	WarenkorbTO leseWarenkorb(PersonTO person);
+	private static final long serialVersionUID = 1L;
 
-	boolean speicherWarenkorb(PersonTO person, WarenkorbTO warenkorb);
+	public WarenkorbTO leseWarenkorb(PersonTO person) {
+		return null;
+	}
+
+	public boolean speichern(PersonTO person, WarenkorbTO warenkorb) {
+		return true;
+	}
+
+	public void loeschen() {
+
+	}
 
 }
