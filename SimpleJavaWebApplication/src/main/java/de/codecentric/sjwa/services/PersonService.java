@@ -1,5 +1,6 @@
 package de.codecentric.sjwa.services;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.enterprise.context.SessionScoped;
@@ -9,11 +10,22 @@ import de.codecentric.sjwa.model.PersonTO;
 
 @Named
 @SessionScoped
-public interface PersonService {
+public class PersonService implements Serializable {
 
-	Set<PersonTO> leseAllePersonen();
+	private static final long serialVersionUID = 1L;
 
-	PersonTO lesePerson(long id);
+	public Set<PersonTO> leseAllePersonen() {
 
-	boolean speicherPerson(PersonTO person);
+		return null;
+	}
+
+	public PersonTO lesePerson(long id) {
+
+		return null;
+	}
+
+	public boolean speicherPerson(PersonTO person) {
+
+		return true;
+	}
 }
