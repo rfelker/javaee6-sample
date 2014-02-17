@@ -58,7 +58,7 @@ public class BerechnungService implements Serializable {
 	public String addiere() {
 		output.clear();
 		output.add(addition.ausfuehren(werte));
-		return "index";
+		return "rechner";
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class BerechnungService implements Serializable {
 		for (Berechnung operation : operationen) {
 			output.add(operation.ausfuehren(werte));
 		}
-		return "index";
+		return "rechner";
 	}
 
 	@PostConstruct
