@@ -9,6 +9,9 @@ public class ProduktTO implements Comparable<ProduktTO>, Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@NotNull
+	private long id;
+
+	@NotNull
 	private String name;
 
 	private String beschreibung;
@@ -43,5 +46,13 @@ public class ProduktTO implements Comparable<ProduktTO>, Serializable {
 	@Override
 	public int compareTo(ProduktTO other) {
 		return this.getName().compareTo(other.name);
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 }
