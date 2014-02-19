@@ -4,20 +4,25 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
+	<h:outputStylesheet library="css" name="style.css" />
 	<title>SJWA</title>
 </h:head>
 <h:body>
-	<h1>Warenkob</h1>
+	<h1>Warenkorb</h1>
     	
     	Liste mit Artikeln
     	
     <p>
-		<h:commandButton action="#{warenkorbService.speichern}" value="Speichern" />
-		<h:commandButton action="#{warenkorbService.loeschen}" value="Löschen" />
+		<h:commandButton action="#{warenkorbService.speichern}"
+			value="Bestellen" />
+		<h:commandButton action="#{warenkorbService.loeschen}" value="Leeren" />
 	</p>
 
 
-	<br/><br/><h:link value="zurück" outcome="back"/><br/>
+	<br />
+	<br />
+	<h:link value="zurück" outcome="back" />
+	<br />
 </h:body>
 </html>
 

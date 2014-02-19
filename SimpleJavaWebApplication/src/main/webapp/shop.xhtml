@@ -1,35 +1,44 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core" 
-      xmlns:ui="http://java.sun.com/jsf/facelets">
-    <h:head>
-        <title>SJWA</title>
-    </h:head>
-    <h:body>     
-    	<h1>Shop</h1>
-        <p>
-			<h:link value="Warenkorb" outcome="warenkorb"/><br/>		
-        </p>        
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<h:outputStylesheet library="css" name="style.css" />
+	<title>SJWA</title>
+</h:head>
+<h:body>
+	<h1>Shop</h1>
+	<p>
+		<h:link value="Warenkorb" outcome="warenkorb" />
+		<br />
+	</p>
 
-        <p>                                      
-			<h:dataTable value="#{produktService.alleProdukteList}" var="produkt">
-			    <h:column>
-			    	<f:facet name="header">Name</f:facet>
-			    	#{produkt.name}
-			    </h:column>
-			    
-			    <h:column>
-			    <f:facet name="header">Preis</f:facet>
-			    	#{produkt.preis}
-			    </h:column>
-			</h:dataTable>
+	<p>
+		<h:dataTable value="#{produktService.alleProdukteList}" var="produkt"
+			styleClass="product-table" headerClass="product-table-header"
+			rowClasses="product-table-even-row, product-table-odd-row"
+			columnClasses="text-column,price-column">
+			<h:column>
+				<f:facet name="header">Name</f:facet>
+				<h:outputText value="#{produkt.name}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Preis</f:facet>
+				<h:outputText value="#{produkt.preis}">
+					<f:convertNumber maxFractionDigits="2" groupingUsed="true"
+						currencySymbol="EUR" type="currency" />
+				</h:outputText>
+			</h:column>
+		</h:dataTable>
+	</p>
 
-        </p>        
-    	
-   	       <br/><br/><h:link value="zurück" outcome="back"/><br/>
-    	
-   </h:body>
+	<br />
+	<br />
+	<h:link value="zurück" outcome="back" />
+	<br />
+
+</h:body>
 </html>
 

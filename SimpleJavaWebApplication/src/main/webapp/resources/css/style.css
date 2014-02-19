@@ -1,0 +1,40 @@
+.order-table {
+	border-collapse: collapse;
+}
+
+.product-table-header {
+    text-align: left;
+	background: none repeat scroll 0 0 #E5E5E5;
+	border-bottom: 2px solid #BBBBBB;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.product-table-odd-row {
+	background: none repeat scroll 0 0 #F1F1F1;
+	border-top: 5px solid #BBBBBB;
+}
+
+.product-table-even-row {
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-top: 1px solid #BBBBBB;
+}
+
+.price-column{
+	text-align: right;	
+	font-weight: bold;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.text-column{
+	text-align: left;	
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
