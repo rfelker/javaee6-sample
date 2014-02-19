@@ -2,6 +2,7 @@ package de.codecentric.sjwa.services;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -85,6 +86,7 @@ public class BerechnungService implements Serializable {
 	}
 
 	public List<String> getOutput() {
+		Collections.sort(output);
 		return output;
 	}
 
