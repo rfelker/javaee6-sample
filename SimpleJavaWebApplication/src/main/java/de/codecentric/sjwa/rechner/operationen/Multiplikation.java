@@ -1,8 +1,8 @@
-package de.codecentric.sjwa.operationen;
+package de.codecentric.sjwa.rechner.operationen;
 
 import javax.inject.Named;
 
-import de.codecentric.sjwa.model.BerechnungsWerte;
+import de.codecentric.sjwa.rechner.model.BerechnungsWerte;
 
 /**
  * Führt eine Multiplikation durch

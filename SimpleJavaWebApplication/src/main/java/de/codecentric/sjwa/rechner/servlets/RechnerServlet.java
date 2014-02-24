@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package de.codecentric.sjwa.servlets;
+package de.codecentric.sjwa.rechner.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import de.codecentric.sjwa.model.BerechnungsWerte;
-import de.codecentric.sjwa.operationen.Addition;
+import de.codecentric.sjwa.rechner.model.BerechnungsWerte;
+import de.codecentric.sjwa.rechner.operationen.Addition;
 
 /**
  * CDI funktioniert auch in einem Servlet (3.0)

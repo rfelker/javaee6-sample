@@ -1,4 +1,4 @@
-package de.codecentric.sjwa.services;
+package de.codecentric.sjwa.rechner.services;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,10 +11,10 @@ import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import de.codecentric.sjwa.model.BerechnungsWerte;
-import de.codecentric.sjwa.model.KleineWerte;
-import de.codecentric.sjwa.operationen.Addition;
-import de.codecentric.sjwa.operationen.Berechnung;
+import de.codecentric.sjwa.rechner.model.BerechnungsWerte;
+import de.codecentric.sjwa.rechner.model.KleineWerte;
+import de.codecentric.sjwa.rechner.operationen.Addition;
+import de.codecentric.sjwa.rechner.operationen.Berechnung;
 
 /**
  * Der Service wird direkt vom JSF2 Kontext aus zugegriffen.

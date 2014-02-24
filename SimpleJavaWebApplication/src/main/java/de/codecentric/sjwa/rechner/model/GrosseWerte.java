@@ -1,4 +1,4 @@
-package de.codecentric.sjwa.model;
+package de.codecentric.sjwa.rechner.model;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -15,6 +15,6 @@ import javax.inject.Qualifier;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Qualifier
-public @interface KleineWerte {
+public @interface GrosseWerte {
 
 }

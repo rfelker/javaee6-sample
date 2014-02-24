@@ -1,4 +1,4 @@
-package de.codecentric.sjwa.model;
+package de.codecentric.sjwa.rechner.model;
 
 import javax.enterprise.inject.Produces;
 import javax.inject.Named;

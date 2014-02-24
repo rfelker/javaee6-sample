@@ -1,6 +1,6 @@
-package de.codecentric.sjwa.operationen;
+package de.codecentric.sjwa.rechner.operationen;
 
-import de.codecentric.sjwa.model.BerechnungsWerte;
+import de.codecentric.sjwa.rechner.model.BerechnungsWerte;
 
 /**
  * Beschreibt eine Berechnung, welche ausgeführt werden kann. Als Resultat
