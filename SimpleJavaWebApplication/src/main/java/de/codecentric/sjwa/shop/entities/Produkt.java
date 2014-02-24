@@ -1,4 +1,4 @@
-package de.codecentric.sjwa.entities;
+package de.codecentric.sjwa.shop.entities;
 
 import java.io.Serializable;
 

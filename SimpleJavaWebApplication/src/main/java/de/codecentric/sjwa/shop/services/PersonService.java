@@ -1,4 +1,4 @@
-package de.codecentric.sjwa.services;
+package de.codecentric.sjwa.shop.services;
 
 import java.io.Serializable;
 import java.util.Set;
@@ -6,7 +6,7 @@ import java.util.Set;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
-import de.codecentric.sjwa.model.PersonTO;
+import de.codecentric.sjwa.shop.model.PersonTO;
 
 @Named
 @SessionScoped
