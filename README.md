@@ -18,13 +18,13 @@ TomEE+ 1.6.0 as an Application Server
 HSQLDB Databese
 * http://hsqldb.org/
 
-## Startup HSQLDB server / sjwaDB database:
+### Startup HSQLDB server / sjwaDB database:
 ````
 java -cp lib/hsqldb.jar org.hsqldb.server.Server --database.0 file:hsqldb/sjwaDB --dbname.0 sjwaDB
 ````
 
 
-# Setup sjwaDB database:
+### Setup sjwaDB database:
 Download HSQLDB: http://sourceforge.net/projects/hsqldb/files/hsqldb
 
 Startup server: 
