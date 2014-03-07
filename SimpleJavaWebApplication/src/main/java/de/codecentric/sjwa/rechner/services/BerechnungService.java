@@ -6,13 +6,15 @@ import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.sql.DataSource;
 
 import de.codecentric.sjwa.rechner.model.BerechnungsWerte;
-import de.codecentric.sjwa.rechner.model.KleineWerte;
+import de.codecentric.sjwa.rechner.model.GrosseWerte;
 import de.codecentric.sjwa.rechner.operationen.Addition;
 import de.codecentric.sjwa.rechner.operationen.Berechnung;
 
@@ -24,6 +26,9 @@ import de.codecentric.sjwa.rechner.operationen.Berechnung;
 public class BerechnungService implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
+	@Resource(name = "jdbc/sjwaDB")
+	private DataSource ds;
 
 	/**
 	 * Enthällt alle Berechnungsergebnisse. Wird aus JSF zugegriffen zum
@@ -48,7 +53,7 @@ public class BerechnungService implements Serializable {
 	 * @GrosseWerte gibt an, welche Fabrik-Methode zuständig ist
 	 */
 	@Inject
-	@KleineWerte
+	@GrosseWerte
 	private BerechnungsWerte werte;
 
 	/**
@@ -57,6 +62,17 @@ public class BerechnungService implements Serializable {
 	 * @return Einfache JSF2 Navigation
 	 */
 	public String addiere() {
+		/*
+		 * try { Connection connection = ds.getConnection(); PreparedStatement
+		 * ps = connection.prepareStatement("select * from USERS"); ResultSet
+		 * result = ps.executeQuery();
+		 * 
+		 * while (result.next()) { String name = result.getString("USER_NAME");
+		 * int i = 0; }
+		 * 
+		 * } catch (SQLException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 */
 		output.clear();
 		output.add(addition.ausfuehren(werte));
 		return "rechner";

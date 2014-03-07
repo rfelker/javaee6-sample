@@ -15,8 +15,7 @@ public class Addition implements Berechnung {
 	@Override
 	public String ausfuehren(BerechnungsWerte input) {
 
-		return String.format(ADDITION, input.getWert1(), input.getWert2(),
-				input.getWert1() + input.getWert2());
+		return String.format(ADDITION, input.getWert1(), input.getWert2(), input.getWert1() + input.getWert2());
 	}
 
 }

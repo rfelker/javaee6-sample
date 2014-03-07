@@ -2,17 +2,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
-<h:head>
+<head>
 	<h:outputStylesheet library="css" name="style.css" />
-	<title>SJWA</title>
-</h:head>
-<h:body>
-	<h1>Auswahl</h1>
-
-	<h:link value="Rechner" outcome="rechner" />
-	<br />
-	<h:link value="Shop" outcome="shop" />
+	<title>SJWA logout</title>
+</head>
+<h:body styleClass="body">
+	<h:messages></h:messages>
+	<h:form>
+		<h:commandLink value="Logout" action="#{loginBean.logout}"></h:commandLink>
+	</h:form>
 </h:body>
 </html>
-

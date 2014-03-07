@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Context reloadable="true">
+
+	<!-- url="jdbc:hsqldb:mem:SJWA_DB" -->
+
+	<Resource name="jdbc/sjwaDB" auth="Container" type="javax.sql.DataSource" maxActive="5"
+		maxIdle="2" maxWait="10000" username="sa" password="" driverClassName="org.hsqldb.jdbcDriver"
+		url="jdbc:hsqldb:hsql://localhost/sjwaDB" />
+
+	<Realm className="org.apache.catalina.realm.DataSourceRealm" localDataSource="true" dataSourceName="jdbc/sjwaDB"
+		userTable="users" userNameCol="user_name" userCredCol="user_pass" userRoleTable="user_roles"
+		roleNameCol="role_name" />
+
+</Context>  
