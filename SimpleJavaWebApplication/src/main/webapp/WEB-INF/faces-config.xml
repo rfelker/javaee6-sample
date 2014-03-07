@@ -5,13 +5,20 @@
       http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
 	version="2.0">
 
+	<application>
+		<resource-bundle>
+			<base-name>de.codecentric.sjwa.messages</base-name>
+			<var>msg</var>
+		</resource-bundle>
+	</application>
+
 	<navigation-rule>
 		<from-view-id>/index.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>rechner</from-outcome>
 			<to-view-id>/rechner.xhtml</to-view-id>
 		</navigation-case>
-		
+
 		<navigation-case>
 			<from-outcome>shop</from-outcome>
 			<to-view-id>/pages/protected/shop.xhtml</to-view-id>
@@ -25,7 +32,7 @@
 			<to-view-id>/index.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/pages/protected/shop.xhtml</from-view-id>
 		<navigation-case>
